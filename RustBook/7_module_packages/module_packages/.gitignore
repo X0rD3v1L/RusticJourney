@@ -1,0 +1,15 @@
+# Ignore compiled binaries and build output
+/target/
+Cargo.lock
+
+# Ignore IDE or editor-specific files
+.idea/
+.vscode/
+*.swp
+
+# Ignore generated documentation
+/doc/
+
+# Ignore user-specific files
+*.iml
+*.rs.user

@@ -1,5 +1,5 @@
 [package]
-name = "modules_packages"
+name = "module_packages"
 version = "0.1.0"
 edition = "2021"
 

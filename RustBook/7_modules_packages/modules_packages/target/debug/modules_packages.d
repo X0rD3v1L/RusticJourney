@@ -1,1 +1,0 @@
-C:\Users\X0r_D3v1L\Desktop\RusticJourney\RustBook\7_modules_packages\modules_packages\target\debug\modules_packages.exe: C:\Users\X0r_D3v1L\Desktop\RusticJourney\RustBook\7_modules_packages\modules_packages\src\main.rs C:\Users\X0r_D3v1L\Desktop\RusticJourney\RustBook\7_modules_packages\modules_packages\src\my_module.rs
