@@ -1,0 +1,1 @@
+C:\Users\X0r_D3v1L\Desktop\RusticJourney\RustWithTooManyLinkedListsBook\lists\target\debug\liblists.rlib: C:\Users\X0r_D3v1L\Desktop\RusticJourney\RustWithTooManyLinkedListsBook\lists\src\first.rs C:\Users\X0r_D3v1L\Desktop\RusticJourney\RustWithTooManyLinkedListsBook\lists\src\lib.rs
