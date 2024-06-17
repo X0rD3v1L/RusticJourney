@@ -1,0 +1,1 @@
+C:\Users\X0r_D3v1L\Desktop\RusticJourney\rust-leetcode-exercises\target\debug\104_maximum_depth_of_binary_tree.exe: C:\Users\X0r_D3v1L\Desktop\RusticJourney\rust-leetcode-exercises\src\bin\104_maximum_depth_of_binary_tree.rs
