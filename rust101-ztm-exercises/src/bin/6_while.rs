@@ -15,7 +15,7 @@ fn main() {
 
     while counter >= 1 {
         println!("{:?}", counter);
-        counter -= 1;
+        counter -= 1; 
     }
     println!("done!");
 }

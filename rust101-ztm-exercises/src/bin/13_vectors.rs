@@ -13,13 +13,13 @@
 fn main() {
     let my_numbers = vec![10,20,30,40];
 
-    for element in &my_numbers {
-       if *element == 30 {
+    for element in my_numbers {
+       if element == 30 {
         println!("thirty")
        } else {
         println!("{:?}", element);
        }
     }
 
-    println!("Length of the vector :: {:?}", my_numbers.len());
+    // println!("Length of the vector :: {:?}", my_numbers.len());
 }
