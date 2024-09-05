@@ -1,0 +1,20 @@
+# Ignore the target directory
+/target/
+
+# Ignore the Cargo.lock file in the root directory
+Cargo.lock
+
+# Ignore the rustdoc documentation
+/doc/
+
+# Ignore the Cargo cache directory
+/.cargo/
+
+# Ignore other build artifacts
+*.rs.bk
+*.swp
+*.swo
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
