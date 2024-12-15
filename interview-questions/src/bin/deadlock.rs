@@ -1,3 +1,6 @@
+/*
+Implement a Deadlock situation in Rust
+*/
 use std::sync::{Arc, Mutex};
 use std::thread;
 

@@ -1,3 +1,6 @@
+/*
+Simulate a memory leak situation in Rust
+*/
 fn main() {
     let mut vecs = Vec::new();
 
@@ -6,7 +9,7 @@ fn main() {
         vecs.push(Box::new(42)); // Allocate memory
     }
     */
-    
+
     //Don't run
     loop {
         vecs.push(Box::new(42));
