@@ -1,0 +1,11 @@
+[package]
+name = "RusticJourney"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[workspace]
+members = [
+    "lifetimes"
+, "rust-leetcode-exercises", "interview-questions"]
