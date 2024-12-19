@@ -8,4 +8,4 @@ edition = "2021"
 [workspace]
 members = [
     "lifetimes"
-, "rust-leetcode-exercises", "interview-questions"]
+, "rust-leetcode-exercises", "interview-questions", "macros"]
