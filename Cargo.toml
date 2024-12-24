@@ -3,9 +3,7 @@ name = "RusticJourney"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
-
 [workspace]
 members = [
     "lifetimes"
-, "rust-leetcode-exercises", "interview-questions", "macros"]
+, "rust-leetcode-exercises", "interview-questions", "macros", "rust-crypto"]
