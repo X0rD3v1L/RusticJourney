@@ -1,6 +1,6 @@
 use ed25519_dalek::{SigningKey, Signature, Signer, Verifier};
 use rand::rngs::OsRng;
-use hex;
+use base64;
 
 fn main() {
     // Step 1: Generate a signing key using a cryptographically secure random number generator
@@ -16,13 +16,13 @@ fn main() {
     // Step 4: Sign the message
     let signature: Signature = signing_key.sign(message);
     println!("Message: {}", String::from_utf8_lossy(message));
-    println!("Signature: {}", hex::encode(signature.to_bytes()));
+    println!("Signature (Base64): {}", base64::encode(signature.to_bytes()));
 
-    // Step 5: Print the signing key (secret key)
-    println!("Signing (Secret) Key: {}", hex::encode(signing_key.to_bytes()));
+    // Step 5: Print the signing key (secret key) in Base64
+    println!("Signing (Secret) Key (Base64): {}", base64::encode(signing_key.to_bytes()));
 
-    // Step 6: Print the verifying key (public key)
-    println!("Verifying (Public) Key: {}", hex::encode(verifying_key.to_bytes()));
+    // Step 6: Print the verifying key (public key) in Base64
+    println!("Verifying (Public) Key (Base64): {}", base64::encode(verifying_key.to_bytes()));
 
     // Step 7: Verify the signature using the signing key
     assert!(signing_key.verify(message, &signature).is_ok());
@@ -32,4 +32,3 @@ fn main() {
     assert!(verifying_key.verify(message, &signature).is_ok());
     println!("Signature verified using the verifying key!");
 }
-
