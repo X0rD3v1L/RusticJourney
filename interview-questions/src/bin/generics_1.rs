@@ -1,10 +1,11 @@
 fn add_numbers<T>(a: T, b: T) -> T
 where
-    T: std::ops::Add<Output = T> + Copy + std::fmt::Debug,
+    T: std::ops::Add<Output = T>,
 {
-    let sum = a + b; // `a` and `b` are still usable after this due to `Copy`
-    println!("Values after addition: a = {:?}, b = {:?}", a, b); // Reusing `a` and `b`
-    sum
+    // let sum = a + b; // `a` and `b` are still usable after this due to `Copy`
+    // println!("Values after addition: a = {:?}, b = {:?}", a, b); // Reusing `a` and `b`
+    // sum
+    a + b
 }
 
 fn main() {
