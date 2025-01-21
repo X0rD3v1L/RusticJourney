@@ -12,6 +12,6 @@ fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
     println!("Largest number: {}", largest(&numbers));
 
-    let words = vec!["apple", "banana", "cherry", "date"];
+    let words = vec!["day", "dice", "dairy", "date"];
     println!("Largest word: {}", largest(&words));
 }
