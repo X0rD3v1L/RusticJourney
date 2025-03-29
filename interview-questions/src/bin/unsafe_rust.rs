@@ -20,12 +20,13 @@ fn main() {
     }
     /*
     Raw pointers (*const T or *mut T) bypass Rust's safety checks.
-    Dereferencing a raw pointer is unsafe because it can lead to undefined behavior,
+    Dereferencing a raw pointer is unsafe because it can lead to undefined behavior,fr
     if the pointer is invalid.
     */
 }
 
 /*
+// This code does not work
 static mut COUNTER: i32 = 0;
 
 fn increment(){

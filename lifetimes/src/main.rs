@@ -37,3 +37,9 @@ fn main() {
 // fn test_3<'a>(param_1: Vec<f64>) -> &'a Vec<f64> { //Lifetimes don't apply because there are no reference input
 //     &param_1
 // }
+
+/*
+Rust allows one and only one owner of memory
+Rust allows multiple references
+Lifetimes ensure a piece of memory is still valid for a reference
+*/
