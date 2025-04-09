@@ -1,2 +1,80 @@
-# Ignore all target directories
-**/target/
+# Rust build
+/target/
+**/*.rs.bk
+
+# Rust/Cargo
+**/Cargo.lock
+/.cargo/
+.cargo-config.toml
+
+# Executables
+*.exe
+*.out
+*.pyc
+*.pyo
+*.pyd
+*.class
+
+# Backup files
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+*.old
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# JetBrains Rider/CLion
+*.iml
+*.ipr
+*.iws
+out/
+
+# Debug and test output
+debug.log
+tests/output/
+
+# Coverage tools
+coverage/
+*.lcov
+
+# Node.js (if mixed tooling)
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker
+docker-compose.override.yml
+.env
+.env.*
+
+# GitHub linguist tweak (optional)
+/.gitattributes
+
+# Custom files/folders
+build/
+dist/
+tmp/
+cache/
