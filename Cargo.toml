@@ -6,4 +6,4 @@ edition = "2021"
 [workspace]
 members = [
     "lifetimes"
-, "rust-leetcode-exercises", "interview-questions", "macros", "rust-crypto", "machine-coding-questions", "tiny-rust-projects/redis", "async-rust", "tiny-rust-projects/write-json"]
+, "rust-leetcode-exercises", "interview-questions", "macros", "rust-crypto", "machine-coding-questions", "tiny-rust-projects/redis", "async-rust", "tiny-rust-projects/write-json", "tree-of-space"]

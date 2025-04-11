@@ -1564,6 +1564,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "tree-of-space"
+version = "0.1.0"
+dependencies = [
+ "parking_lot",
+]
+
+[[package]]
 name = "try-lock"
 version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
