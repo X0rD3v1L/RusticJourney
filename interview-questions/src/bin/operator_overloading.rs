@@ -1,3 +1,7 @@
+/*
+Operator overloading means giving custom meaning to standard operators 
+(+, -, *, /, ==, etc.) when used with user-defined types.
+*/
 use std::ops::Add;
 struct Point {
     x: i32,

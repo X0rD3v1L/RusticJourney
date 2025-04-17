@@ -25,7 +25,7 @@ impl From<(String, u32)> for Person {
 
 fn main() {
     // Using `From`
-    let person_data = (String::from("Ben"), 24);
+    let person_data: (String, u32) = (String::from("Ben"), 24);
     let person = Person::from(person_data);
     println!("Name: {}, Age: {}", person.name, person.age);
 

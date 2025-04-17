@@ -26,7 +26,7 @@ fn main() {
 }
 
 /*
-// This code does not work
+// This code does not work, not allowed in Rust 2024 edition
 static mut COUNTER: i32 = 0;
 
 fn increment(){
