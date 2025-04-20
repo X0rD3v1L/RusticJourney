@@ -12,9 +12,13 @@ The repository is organized into several directories, each focusing on different
 
 - **RustWithTooManyLinkedListsBook/lists**: Explores implementations of linked lists in Rust, inspired by the "Learn Rust With Entirely Too Many Linked Lists" book.
 
+- **async-rust**: Demonstrates asynchronous programming concepts in Rust.
+
 - **interview-questions**: A collection of Rust-related interview questions and answers.
 
 - **lifetimes**: Examples and explanations related to Rust's lifetime annotations.
+
+- **machine-coding-questions**: Solutions and explanations for machine coding problems in Rust.
 
 - **macros**: Insights and examples on writing and using macros in Rust.
 
@@ -27,6 +31,8 @@ The repository is organized into several directories, each focusing on different
 - **rust101-ztm-exercises**: Exercises from the "Rust 101" course by Zero To Mastery.
 
 - **tiny-rust-projects**: Small Rust projects developed to practice and demonstrate various concepts.
+
+- **tree-of-space**: Projects and experiments related to spatial data structures in Rust.
 
 ## Getting Started
 
