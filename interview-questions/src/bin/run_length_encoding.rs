@@ -1,6 +1,6 @@
 fn main() {
     let name = String::from("aabbbaacc");
-    let chars = name.chars().collect::<Vec<char>>();
+    let chars:Vec<char> = name.chars().collect();
     let mut i = 0;
 
     while i < chars.len() {

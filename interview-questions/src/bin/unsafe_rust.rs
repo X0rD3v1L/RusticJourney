@@ -20,7 +20,7 @@ fn main() {
     }
     /*
     Raw pointers (*const T or *mut T) bypass Rust's safety checks.
-    Dereferencing a raw pointer is unsafe because it can lead to undefined behavior,fr
+    Dereferencing a raw pointer is unsafe because it can lead to undefined behavior,
     if the pointer is invalid.
     */
 }

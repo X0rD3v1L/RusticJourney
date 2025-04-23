@@ -4,6 +4,10 @@ struct Person {
     age: u32
 }
 
+/* Implement the From trait for a type to define how it can be created from another type.
+The Into trait is automatically implemented when From is implemented.
+*/
+
 impl From<(String, u32)> for Person {
     fn from(data: (String, u32)) -> Self {
         Person {
