@@ -1,0 +1,1 @@
+/Users/benarjeesambangi/Desktop/personal/RusticJourney/rust-cp-templates/target/debug/destruct_to_variables: /Users/benarjeesambangi/Desktop/personal/RusticJourney/rust-cp-templates/src/bin/destruct_to_variables.rs

@@ -1,0 +1,1 @@
+/Users/benarjeesambangi/Desktop/personal/RusticJourney/rust-cp-templates/target/debug/read_chars_to_string: /Users/benarjeesambangi/Desktop/personal/RusticJourney/rust-cp-templates/src/bin/read_chars_to_string.rs
