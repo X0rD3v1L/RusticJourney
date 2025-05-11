@@ -6,7 +6,7 @@ Implement a logic where one of the threads wait for other threads to complete an
 use std::sync::{Arc, Barrier};
 use std::thread;
 use std::time::Duration;
-use rand::{thread_rng, Rng};
+use rand::{rng, Rng};
 
 fn main() {
     let barrier = Arc::new(Barrier::new(4)); // 4 threads will synchronize here
@@ -24,7 +24,7 @@ fn main() {
                 println!("Thread {i} starts execution after others finished.");
             } else {
                 // Other threads: Perform some task
-                let delay = thread_rng().gen_range(1..5); // Random sleep time (1-4 seconds)
+                let delay = rng().random_range(1..5); // Random sleep time (1-4 seconds)
                 println!("Thread {i} working for {delay} seconds.");
                 thread::sleep(Duration::from_secs(delay));
                 println!("Thread {i} finished work.");
