@@ -2,7 +2,7 @@
 Unsafe rust example
 
 Unsafe Rust allows developers to perform low-level operations that bypass Rust's usual safety guarantees. 
-This includes operations like dereferencing raw pointers, calling unsafe functions, or accessing mutable static variables. 
+This includes operations like dereferencing raw pointers, calling unsafe functions. 
 Unsafe Rust is necessary in scenarios where performance and control are critical, such as interacting with hardware,
 building abstractions like custom allocators, or interfacing with C code via FFI (Foreign Function Interface).
 

@@ -1,21 +1,32 @@
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
-
-impl Rectangle {
-    // Associated function (like a static method)
-    fn new(width: u32, height: u32) -> Self {
-        Self { width, height }
+mod animal {
+    pub struct Dog {
+        name: String,
+        age: u8,
     }
 
-    // Method (takes &self as the first parameter)
-    fn area(&self) -> u32 {
-        self.width * self.height
+    impl Dog {
+        // Public constructor
+        pub fn new(name: &str, age: u8) -> Dog {
+            Dog {
+                name: name.to_string(),
+                age,
+            }
+        }
+
+        // Public method
+        pub fn speak(&self) {
+            println!("Woof! My name is {}.", self.name);
+        }
+
+        // Private method
+        fn secret(&self) {
+            println!("I know a secret!");
+        }
     }
 }
 
 fn main() {
-    let rect = Rectangle::new(10, 20);
-    println!("Area: {}", rect.area());
+    let dog = animal::Dog::new("Buddy", 3);
+    dog.speak();
+    // dog.secret(); // Error: private method, not accessible here
 }
