@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-fn distinct_substring(s: &str) -> usize {
+fn distinct_substrings(s: &str) -> usize {
     let n = s.len();
     let mut substrings = HashSet::new();
     let chars: Vec<char> = s.chars().collect();
@@ -32,6 +32,6 @@ fn distinct_substring(s: &str) -> usize {
 }
 
 fn main() {
-    let s = "abba";
-    println!("{}", distinct_substring(s));
+    let s = "gffg";
+    println!("{}", distinct_substrings(s)); //{"f", "gf", "g", "fg"}
 }

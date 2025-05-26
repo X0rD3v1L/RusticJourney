@@ -47,7 +47,7 @@ fn main() {
     });
 
     // Let the threads run for 2 seconds
-    thread::sleep(Duration::from_millis(500));
+    thread::sleep(Duration::from_millis(50));
 
     // Stop the threads
     running.store(false, Ordering::Relaxed);

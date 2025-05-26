@@ -60,6 +60,29 @@ impl TreeNode {
             None => {}
         }
     }
+    pub fn print_level_order(root: &Option<Rc<RefCell<TreeNode>>>) {
+        if root.is_none() {
+            return;
+        }
+
+        let mut queue = VecDeque::new();
+        queue.push_back(root.as_ref().unwrap().clone());
+
+        while let Some(current) = queue.pop_front() {
+            let node = current.borrow();
+            print!("{} ", node.val);
+
+            if let Some(left) = &node.left {
+                queue.push_back(left.clone());
+            }
+
+            if let Some(right) = &node.right {
+                queue.push_back(right.clone());
+            }
+        }
+
+        println!();
+    }
 }
 
 fn main() {
@@ -69,4 +92,5 @@ fn main() {
     }
     println!("Binary Tree:");
     TreeNode::print_tree(&root);
+    TreeNode::print_level_order(&root);
 }

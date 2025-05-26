@@ -9,19 +9,25 @@ where
     Owned(<B as ToOwned>::Owned),
 }
 */
-fn modulo_3(input: u8) -> Cow<'static, str> {
-    match input % 3 {
-        0 => "Remainder is 0".into(),
-        1 => "Remainder is 1".into(),
-        remainder => format!("Remainder is {}", remainder).into(),
+fn remove_spaces<'a>(input: impl Into<Cow<'a, str>>) -> Cow<'a, str> {
+    let input = input.into();
+    if input.contains(' ') {
+        Cow::Owned(input.replace(" ", ""))
+    } else {
+        input
     }
 }
 
+
 fn main() {
-    for number in 1..=6 {
-        match modulo_3(number) {
-            Cow::Borrowed(message) => println!("{} went in. The Cow is borrowed with this message: {}", number, message),
-            Cow::Owned(message) => println!("{} went in. The Cow is owned with this message: {}", number, message),
-        }
-    }
+    let s1 = "HelloWorld"; // &str
+    let s2 = String::from("Hello World"); // String
+
+    let r1 = remove_spaces(s1);
+    let r2 = remove_spaces(s2); // works!
+
+    println!("r1: {}", r1);
+    println!("r2: {}", r2);
 }
+
+

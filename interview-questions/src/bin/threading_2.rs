@@ -4,37 +4,26 @@ Thread 1 will increment the variable by certain value, and
 Thread 2 will decrement the variable by certain value.
 */
 
-use std::sync::{
-    mpsc::{self, Receiver, Sender},
-    Arc,
-};
+use std::sync::{Arc, Mutex};
 use std::thread;
 
 fn main() {
-    println!("Two thread mod one variable");
-    let mut ctr = 32;
+    let counter = Arc::new(Mutex::new(32));
 
-    let (s, r): (Sender<i32>, Receiver<i32>) = mpsc::channel();
+    let counter_inc = Arc::clone(&counter);
+    let t1 = thread::spawn(move || {
+        let mut num = counter_inc.lock().unwrap();
+        *num += 15;
+    });
 
-    let c_inc = s.clone();
-    thread::spawn(move || {
-        c_inc.send(15).unwrap();
-    })
-    .join()
-    .unwrap();
+    let counter_dec = Arc::clone(&counter);
+    let t2 = thread::spawn(move || {
+        let mut num = counter_dec.lock().unwrap();
+        *num -= 5;
+    });
 
-    let c_dec = s.clone();
-    thread::spawn(move || {
-        c_dec.send(-5).unwrap();
-    })
-   .join()
-    .unwrap();
+    t1.join().unwrap();
+    t2.join().unwrap();
 
-    let crx = Arc::clone(&Arc::new(&r));
-    for _ in 0..2 {
-        let rcv_val = crx.recv().unwrap();
-        ctr += rcv_val;
-    }
-
-    println!("The counter value is {ctr}");
+    println!("The counter value is {}", *counter.lock().unwrap());
 }

@@ -11,3 +11,4 @@ fn main() {
         Message::Write(text) => println!("Message: {}", text),
     }
 }
+

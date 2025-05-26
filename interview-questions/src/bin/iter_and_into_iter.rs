@@ -9,7 +9,7 @@ When to Use: When you want to iterate without consuming the original collection.
 
 fn main() {
     let arr = vec![0, 1, 2, 3, 4, 5];
-
+    // let static_arr = [1, 2, 3, 4, 5]; //fixed size array doesn't throw errors for Copy Type
     // //value is moved in this case
     // for elem in arr {
     //     println!("{}", elem);
@@ -48,6 +48,11 @@ fn main() {
         String::from("Complete Rust project"),
     ];
 
+    //without clone this will give an error as it requires Vec<String> and not Vec<&String>
+    let copied_tasks: Vec<String> = tasks.iter().cloned().collect();
+
+    println!("{:?}", copied_tasks);
+
     // Using .into_iter() to move ownership of each element
     let processed_tasks: Vec<String> = tasks.into_iter()
         .map(|task| format!("Task: {}", task))  // Transforming the task
@@ -61,7 +66,4 @@ fn main() {
     // Uncommenting the next line will cause an error because 'tasks' is moved
     // println!("{:?}", tasks);
 
-    //if we do the above operation using iter(), this would force us to clone each string 
-    //to collect into a new vector, which is less efficient.
-    
 }
