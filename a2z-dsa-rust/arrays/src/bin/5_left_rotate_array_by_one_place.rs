@@ -1,4 +1,3 @@
-//Left Roate by one place
 fn left_rotate_by_one(arr: &mut [i32]) {
     if arr.is_empty() {
         return;
