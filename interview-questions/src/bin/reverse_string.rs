@@ -38,3 +38,23 @@ fn reverse_string(input: &str) -> String {
     result
 }
 */
+
+/*
+fn reverse_string(s: String) -> String {
+    let mut reversed = String::new();
+    
+    for ch in s.chars().rev() {
+        reversed.push(ch);
+    }
+    
+    reversed
+}
+
+fn main() {
+    let s = String::from("hello");
+    println!("{}", reverse_string(s));
+
+    let s2 = String::from("hé🙂");
+    println!("{}", reverse_string(s2));
+}
+*/

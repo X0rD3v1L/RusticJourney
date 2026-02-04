@@ -8,6 +8,7 @@ struct PriceUpdate {
 }
 
 // Simulates a market data feed publishing prices
+
 async fn market_feed(publisher: broadcast::Sender<PriceUpdate>) {
     let prices = vec![
         ("AAPL", 192.34),
