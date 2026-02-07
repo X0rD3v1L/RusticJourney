@@ -7,13 +7,13 @@ fn main() {
     println!("{}", a);
 }
 
-// fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
-//     if s1.len() > s2.len() {
-//         s1
-//     } else {
-//         s2
-//     }
-// }
+fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
+    if s1.len() > s2.len() {
+        s1
+    } else {
+        s2
+    }
+}
 
 // fn main() {
 //     let str1 = String::from("Rust");
