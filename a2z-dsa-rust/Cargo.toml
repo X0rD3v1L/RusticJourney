@@ -1,5 +1,5 @@
 [workspace]
 members = [
-    "arrays",
+    "arrays", "binary_search",
     # add more crates here as you create them, e.g. "linked_lists", "stacks"
 ]
