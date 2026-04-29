@@ -1,0 +1,42 @@
+# Root workspace — run `cargo build/test/clippy --workspace` from here.
+# Note: a2z-dsa-rust/ keeps its own nested workspace (cd into it separately).
+[workspace]
+resolver = "2"
+members = [
+    # RustBook chapters
+    "RustBook/2_guessing_game/guessing_game",
+    "RustBook/7_module_packages/module_packages",
+
+    # Core learning modules
+    "async-rust",
+    "interview-questions",
+    "lifetimes",
+    "machine-coding-questions",
+    "macros",
+    "math_app",
+    "multithreading",
+    "oops-in-rust",
+    "rust-cp-templates",
+    "rust-crypto",
+    "rust-design-patterns",
+    "rust-leetcode-exercises",
+    "rust101-ztm-exercises",
+    "tree-of-space",
+
+    # Tiny projects
+    "tiny-rust-projects/calculator",
+    "tiny-rust-projects/cat",
+    "tiny-rust-projects/grep",
+    "tiny-rust-projects/http_server",
+    "tiny-rust-projects/read-json",
+    "tiny-rust-projects/redis",
+    "tiny-rust-projects/write-json",
+]
+
+# Shared dependency versions — individual crates inherit these with
+# { workspace = true } to keep versions in sync.
+[workspace.dependencies]
+tokio    = { version = "1.46", features = ["full"] }
+serde    = { version = "1.0",  features = ["derive"] }
+rand     = "0.9"
+thiserror = "2"

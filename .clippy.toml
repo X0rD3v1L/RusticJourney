@@ -1,0 +1,11 @@
+# Clippy configuration for the RusticJourney workspace.
+# Run: cargo clippy --workspace -- -D warnings
+
+# Complexity threshold for cognitive complexity lint
+cognitive-complexity-threshold = 30
+
+# Allow up to 7 function arguments (default 7)
+too-many-arguments-threshold = 7
+
+# Warn on types larger than 512 bytes being passed by value
+large-types-passed-by-value-size-limit = 512
