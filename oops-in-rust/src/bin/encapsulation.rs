@@ -16,6 +16,7 @@ mod animal {
         // Public method
         pub fn speak(&self) {
             println!("Woof! My name is {}.", self.name);
+            self.secret();
         }
 
         // Private method
